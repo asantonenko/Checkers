@@ -24,7 +24,7 @@ public:
 
  pair <int, int> can_move(int pos_x, int pos_y, GameBoard * game_board) const override
 {
-  if (pos_x<0 ||....|| game_board->figure_present(pos_x,pos_y) )
+  if (!game_board->is_inside(pos_x,pos_y) || ... || game_board->figure_present(pos_x,pos_y) )
   {
      return cannot_move;
   }
